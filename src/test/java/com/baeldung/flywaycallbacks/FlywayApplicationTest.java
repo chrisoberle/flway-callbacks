@@ -34,7 +34,6 @@ public class FlywayApplicationTest {
         flyway.setDataSource(dataSource);
         flyway.setLocations("db/migration");
         flyway.migrate(); 
-        //logFlywayInfo(flyway.info());
     }
 
     @Test
@@ -45,7 +44,6 @@ public class FlywayApplicationTest {
         flyway.setLocations("db/migration");
         flyway.setCallbacks(new ExampleFlywayCallback());
         flyway.migrate();
-        //logFlywayInfo(flyway.info());
     }
 
     @Test
@@ -55,7 +53,6 @@ public class FlywayApplicationTest {
         flyway.setDataSource(dataSource);
         flyway.setLocations("db/migration", "db/callbacks");
         flyway.migrate(); 
-        //logFlywayInfo(flyway.info());
     }
 
     @Test
@@ -66,15 +63,6 @@ public class FlywayApplicationTest {
         flyway.setLocations("db/migration", "db/callbacks");
         flyway.setCallbacks(new ExampleFlywayCallback());
         flyway.migrate(); 
-        //logFlywayInfo(flyway.info());
-    }
-
-    private void logFlywayInfo(MigrationInfoService infoService) {
-        log.info(String.format("%s\t%s\t%s\t%s", "Version", "Type", "State", "Script"));
-        log.info(String.format("%s", "----------------------------------------"));
-        Arrays.asList(infoService.all()).stream().forEach( mi -> {
-            log.info(String.format("%s\t%s\t%s\t%s", mi.getVersion(), mi.getType(), mi.getState(), mi.getScript()));
-        });
     }
 
     private void logTestBoundary(String testName) {
