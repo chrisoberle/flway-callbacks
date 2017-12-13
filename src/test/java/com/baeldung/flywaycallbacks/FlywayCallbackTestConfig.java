@@ -1,4 +1,4 @@
-package com.baeldung.flyway;
+package com.baeldung.flywaycallbacks;
 
 import javax.sql.DataSource;
 

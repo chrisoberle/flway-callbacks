@@ -1,4 +1,4 @@
-package com.baeldung.flyway;
+package com.baeldung.flywaycallbacks;
 
 import java.util.Arrays;
 
@@ -15,11 +15,12 @@ import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.annotation.DirtiesContext.ClassMode;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
+import com.baeldung.flywaycallbacks.FlywayCallbackTestConfig;
 
 @RunWith(SpringRunner.class)
 @DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
 @ContextConfiguration(classes = FlywayCallbackTestConfig.class)
-public class FlywayApplicationTests {
+public class FlywayApplicationTest {
 
     private Log log = LogFactory.getLog(getClass());
 

@@ -3,19 +3,18 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.baeldung</groupId>
-	<artifactId>flyway</artifactId>
+	<artifactId>flyway-callbacks</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>flyway</name>
-	<description>Flyway Maven Plugin Callback Demo</description>
+	<name>flyway-callbacks</name>
+	<description>Flyway Callbacks Demo</description>
 
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.8.RELEASE</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<artifactId>flyway</artifactId>
+		<groupId>com.baeldung</groupId>
+		<version>1.0</version>
+		<relativePath>../../flyway</relativePath>
 	</parent>
 
 	<properties>
@@ -39,7 +38,6 @@
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

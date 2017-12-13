@@ -1,4 +1,4 @@
-package com.baeldung.flyway;
+package com.baeldung.flywaycallbacks;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
